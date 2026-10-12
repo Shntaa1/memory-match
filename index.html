@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff3f8">
+  <meta name="description" content="Memory Match, game mencocokkan kartu yang lucu dan menyenangkan.">
+  <title>Memory Match 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-container">
+    <header class="header">
+      <div class="logo">🧸</div>
+      <p class="eyebrow">A LITTLE BRAIN GAME</p>
+      <h1>Memory Match<span>♡</span></h1>
+      <p class="subtitle">Temukan pasangan yang cocok!</p>
+    </header>
+
+    <section class="stats" aria-label="Statistik permainan">
+      <div class="stat-card">
+        <span>🏆 Rekor</span>
+        <strong id="best-score">0</strong>
+      </div>
+      <div class="stat-card">
+        <span>⭐ Skor</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="stat-card">
+        <span>👣 Langkah</span>
+        <strong id="moves">0</strong>
+      </div>
+      <div class="stat-card">
+        <span>⏰ Waktu</span>
+        <strong id="timer">00:00</strong>
+      </div>
+    </section>
+
+    <section class="game-panel">
+      <div class="progress-info">
+        <span>Pasangan ditemukan</span>
+        <strong id="progress-text">0 / 8</strong>
+      </div>
+
+      <div class="progress-track">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+      <div id="game-board" class="game-board"
+           aria-label="Papan kartu Memory Match"></div>
+
+      <div id="pause-overlay" class="pause-overlay" hidden>
+        <div class="pause-emoji">☁️</div>
+        <h2>Waktunya istirahat!</h2>
+        <p>Game kamu sedang dijeda.</p>
+        <button id="resume-overlay" class="btn btn-primary">
+          ▶ Lanjut bermain
+        </button>
+      </div>
+    </section>
+
+    <p id="message" class="message" aria-live="polite">
+      Yuk, temukan semua pasangan kartu! 🌷
+    </p>
+
+    <div class="controls">
+      <button id="pause-btn" class="btn btn-secondary">
+        ⏸ Jeda
+      </button>
+      <button id="restart-btn" class="btn btn-primary">
+        ↻ Mulai Ulang
+      </button>
+    </div>
+
+    <footer>
+      Made with ♡ and a little magic
+    </footer>
+  </main>
+
+  <div id="win-modal" class="modal" hidden>
+    <div class="modal-card">
+      <div class="win-emoji">🎉</div>
+      <p class="eyebrow">YOU DID IT!</p>
+      <h2>Hebat sekali!</h2>
+      <p class="win-description">
+        Kamu berhasil menemukan semua pasangan kartu!
+      </p>
+
+      <div class="result-stats">
+        <div>
+          <span>Skor</span>
+          <strong id="final-score">0</strong>
+        </div>
+        <div>
+          <span>Langkah</span>
+          <strong id="final-moves">0</strong>
+        </div>
+        <div>
+          <span>Waktu</span>
+          <strong id="final-time">00:00</strong>
+        </div>
+      </div>
+
+      <p id="record-message" class="record-message"></p>
+      <button id="play-again-btn" class="btn btn-primary">
+        💗 Main Lagi
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+      </html>
+  
